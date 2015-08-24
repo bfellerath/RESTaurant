@@ -1,0 +1,14 @@
+
+
+<a href="/apartments/new">New Apartments</a>
+
+<ul>
+
+  <% @apartments.each do |apartment|%>
+  <li>
+  <%= apartment.room_number %>
+  </li>
+  <% end %>
+
+
+</ul>
