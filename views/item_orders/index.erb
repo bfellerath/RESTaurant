@@ -1,0 +1,14 @@
+<h3>ITEM ORDERS... THE PAGE!!!</h3>
+
+<a href="/item_orders/new">New item_orders</a>
+<a href="/item_orders">item orders</a>
+<a href="/">home</a>
+
+<ul>
+
+  <% @item_orders.each do |item_order| %>
+  <li>
+  <%= item_order.name %>
+  </li>
+  <% end %>
+</ul>

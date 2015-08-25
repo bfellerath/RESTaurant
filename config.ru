@@ -3,16 +3,18 @@ require 'bundler'
 Bundler.require()
 
 #MODELS
-require './models/building'
-require './models/apartment'
+require './models/food_items'
+require './models/parties'
 
 # CONTROLLERS
 require './controllers/application_controller'
 require './controllers/welcome_controller'
-require './controllers/buildings_controller'
-require './controllers/apartments_controller'
+require './controllers/food_items_controller'
+require './controllers/parties_controller'
+require './controllers/item_orders_controller'
 
 #ROUTING
-map('/buildings'){ run BuildingsController }
-map('/apartments'){ run ApartmentsController }
+map('/food_items'){ run FoodItemsController }
+map('/parties'){ run PartiesController }
+map('/item_orders'){ run ItemOrdersController }
 map('/'){ run WelcomeController }

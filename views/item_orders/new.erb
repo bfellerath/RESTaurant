@@ -1,0 +1,26 @@
+<div class="row">
+  <form class="five columns" action="/item_orders" method="post">
+    <select name="item_order[food_item_id]">
+      <% @food_items.each do |food_item| %>
+      <option value="<%= food_item_id %>">
+        <%= food_item.name %>
+      </option>
+      <% end %>
+
+    </select>
+
+
+    <select name="item_order[party_id]">
+      <% @parties.each do |party| %>
+      <option value="<%= party_id %>">
+        <%= party.name %>
+      </option>
+      <% end %>
+    </select>
+
+
+    <input type="submit">
+
+  </form>
+
+</div>

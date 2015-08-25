@@ -1,0 +1,14 @@
+<h3>Food ITems THE PAGE</h3>
+
+<a href="/food_items/new">New food_items</a>
+<a href="/parties">Parties</a>
+<a href="/parties/new">New Parties</a>
+
+<ul>
+
+  <% @food_items.each do |food_item| %>
+  <li>
+  <%= food_item.name %>
+  </li>
+  <% end %>
+</ul>

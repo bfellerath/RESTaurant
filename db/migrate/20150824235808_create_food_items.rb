@@ -5,6 +5,7 @@ class CreateFoodItems < ActiveRecord::Migration
       t.string :name
       t.integer :price
       t.string :allergens
+      t.timestamps
     end
   end
 end
