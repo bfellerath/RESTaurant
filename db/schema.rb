@@ -11,23 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824221857) do
+ActiveRecord::Schema.define(version: 20150824235835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "apartments", force: :cascade do |t|
-    t.integer  "room_number"
-    t.integer  "sqft"
-    t.integer  "building_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "food_items", force: :cascade do |t|
+    t.integer "food_id"
+    t.string  "name"
+    t.integer "price"
+    t.string  "allergens"
   end
 
-  create_table "buildings", force: :cascade do |t|
-    t.string   "address"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "parties", force: :cascade do |t|
+    t.integer "parties_id"
+    t.integer "table_number"
+    t.string  "is_paid"
   end
 
 end
