@@ -8,7 +8,8 @@
 
   <% @item_orders.each do |item_order| %>
   <li>
-  <%= item_order.name %>
+  <%= Party.find(item_order.parties_id) %>
+  <%= Food.find(item_order.food_id) %>
   </li>
   <% end %>
 </ul>

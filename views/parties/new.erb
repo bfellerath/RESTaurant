@@ -1,16 +1,9 @@
 <h3>New PArty</h3>
 
 <form action="/parties" method="post">
-  <input type="text" name="party" placeholder="... party">
   <input type="text" name="party[table_number]" placeholder="... table number">
 
-  <select name="party[food_item_id]">
-    <% @food_items.each do |food_item| %>
-    <option value="<%= food_item.id %>">
-      <%= food_item.name %>
-    </option>
-    <% end %>
-  </select>
+
 
   <input type="submit">
 

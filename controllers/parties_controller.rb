@@ -11,13 +11,9 @@ class PartiesController < ApplicationController
   end
 
   post '/' do
-    Party.create(params[:party])
+    party = Party.create(params[:party])
     redirect '/parties'
   end
 
-  post '/' do
-    Party.create(params[:party_table_nubmer])
-    redirect '/parties'
-  end
 
 end

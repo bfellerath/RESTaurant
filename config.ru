@@ -3,8 +3,9 @@ require 'bundler'
 Bundler.require()
 
 #MODELS
-require './models/food_items'
-require './models/parties'
+require './models/food_item'
+require './models/party'
+require './models/item_order'
 
 # CONTROLLERS
 require './controllers/application_controller'
