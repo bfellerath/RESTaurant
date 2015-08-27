@@ -1,6 +1,11 @@
+<a href="/item_orders/new">New item_orders</a><br>
+<a href="/item_orders">item orders</a><br>
+<a href="/">home</a>
+
+
 <div class="row">
   <form class="five columns" action="/item_orders" method="post">
-    <select name="item_order[food_id]">
+    <select name="item_order[food_item_id]">
       <% @food_items.each do |food_item| %>
       <option value="<%= food_item.id %>">
         <%= food_item.name %>
@@ -10,7 +15,9 @@
     </select>
 
 
-    <select name="item_order[parties_id]">
+
+
+    <select name="item_order[party_id]">
       <% @parties.each do |party| %>
       <option value="<%= party.id %>">
         <%= party.table_number %>
@@ -22,5 +29,7 @@
     <input type="submit">
 
   </form>
+
+
 
 </div>
