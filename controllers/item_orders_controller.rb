@@ -16,9 +16,6 @@ class ItemOrdersController < ApplicationController
     redirect '/item_orders'
   end
 
-
-
-
   #-- FORM for UPDATING: edit--
   get '/:id/edit' do
     @item_order = ItemOrder.find(params[:id])
@@ -26,13 +23,27 @@ class ItemOrdersController < ApplicationController
 
   end
 
-  #--- UPDATE ITEM ORDERS: update --
+  #- DESTROY ITEM_ORDER: destroy -
 
-  put '/:id' do
-    item_order = ItemOrder.find(params[:id])
-    item_order.update(params[:item_order["food_item"]["name"]])
+  delete '/:id' do
+    ItemOrder.delete(params[:id])
+    redirect '/item_orders'
 
   end
+
+
+
+
+  #--- UPDATE ITEM ORDERS: update --
+  #
+  # put '/:id' do
+  #   binding.pry
+  #   item_order = ItemOrder.find(params[:id])
+  #   item_order.update ({
+  #     item_order: params["food_item"]
+  #     })
+  #
+  # end
 
 
 end

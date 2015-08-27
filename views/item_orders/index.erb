@@ -13,9 +13,15 @@
   <li>
 
     <%= item_order.food_item.name %>
-    <%= item_order.party.table_number %>
+    table number:<%= item_order.party.table_number %>
     <%= item_order.party.is_paid %>
     <a href="/item_orders/<%=item_order.id%>/edit">EDIT</a>
+    <a href="/item_orders/<%=item_order.id%>/edit">DELETE</a>
+
+  
+
+
+
 
 
   </li>

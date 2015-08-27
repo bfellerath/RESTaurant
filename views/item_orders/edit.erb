@@ -1,9 +1,14 @@
-<h2>Edit a specific item order</h2>
+<h2>WHY ISN'T THIS PAGE STYLED!?!?</h2>
 
-<form class="" action="/item_orders/<%=@item_order.id%>" method="post">
+<form action="/item_orders/<%=@item_order.id%>" method="post">
   <input type="hidden" name="_method" value="put">
-  <input type="text" name="item_order[food_item][name]" value="<%=@item_order.food_item.name%>">
-  <input type="text" name="item_order[party][table_number]" value="<%@item_order.party.table_number%>">
+  <input type="text" name="food_item" value="<%=@item_order.food_item.name%>">
+  <input type="text" name="item_order[party][is_paid]" value="<%@item_order.party.table_number%>">
   <input type="submit" value="Update ITEM ORDER">
+
+</form>
+<form action="/item_orders/<%=@item_order.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
 
 </form>

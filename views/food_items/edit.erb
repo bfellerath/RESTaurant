@@ -1,0 +1,17 @@
+
+<h2>Edit a specific item order</h2>
+
+<form action="/food_items/<%=@food_item.id%>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="food_item[name]" value="<%=@food_item.name%>">
+  <input type="text" name="food_item[price]" value="<%@food_item.price%>">
+  <input type="submit" value="Update FOOD ITEM">
+
+</form>
+
+
+<form action="/food_items/<% @food_item.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+
+</form>

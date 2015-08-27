@@ -13,6 +13,9 @@
   <% @food_items.each do |food_item| %>
   <li>
   <%= food_item.name %>
+  <%= food_item.price %>
+  <a href="/food_items/<%=food_item.id%>/edit">EDIT</a>
+  <a href="/food_items/<%=food_item.id%>/edit">DELETE</a>
   </li>
   <% end %>
 </ul>
