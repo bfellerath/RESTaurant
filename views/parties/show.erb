@@ -12,16 +12,19 @@
 
 
 <ul>
+  table number:<%= @party.table_number %>
+  <%= @party.is_paid %>
+  <% @party.item_orders.each do |item_order| %>
 
   <li>
 
-    table number:<%= @party.table_number %>
-    <%= @party.is_paid %>
 
-
-
-
+    <%=item_order.food_item.name%>
+    <%=item_order.food_item.price%>
 
   </li>
+
+  <% end %>
+
 
 </ul>

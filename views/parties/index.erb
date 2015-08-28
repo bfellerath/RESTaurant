@@ -1,18 +1,21 @@
 
 <a href="/">home</a><br>
 <a href="/parties/new">New parties</a><br>
-<a href="/item_orders/new">New item_orders</a><br>
+<a href="/item_orders/new">ENTER ANOTHER ITEM ORDER</a><br>
 
-<ul>
+<ul><br>
 
   <% @parties.each do |party|%>
   <li>
-    <%= party.table_number %>
+    TABLE: <%= party.table_number %><br>
 
-<a href="/parties/<%=party.id%>">Show parties -- receipt</a>
+<a href="/parties/<%=party.id%>">View This Party's Receipt</a>
 
-  </li>
+
+  </li><br>
   <% end %>
+
+
 
 
 
