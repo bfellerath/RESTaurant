@@ -15,5 +15,11 @@ class PartiesController < ApplicationController
     redirect '/parties'
   end
 
+  #- READ INDIVIDUAL: show--
+  get '/:id' do
+    @party = Party.find(params[:id])
+    erb :'parties/show'
+  end
+
 
 end

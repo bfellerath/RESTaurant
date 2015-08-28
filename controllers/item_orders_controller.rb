@@ -16,6 +16,13 @@ class ItemOrdersController < ApplicationController
     redirect '/item_orders'
   end
 
+  #- READ INDIVIDUAL: show--
+  get '/:id' do
+    @item_order = ItemOrder.find(params[:id])
+    erb :'item_orders/show'
+  end
+
+
   #-- FORM for UPDATING: edit--
   get '/:id/edit' do
     @item_order = ItemOrder.find(params[:id])
@@ -30,8 +37,6 @@ class ItemOrdersController < ApplicationController
     redirect '/item_orders'
 
   end
-
-
 
 
   #--- UPDATE ITEM ORDERS: update --

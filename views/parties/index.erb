@@ -1,6 +1,7 @@
 
-<a href="/">home</a>
-<a href="/parties/new">New parties</a>
+<a href="/">home</a><br>
+<a href="/parties/new">New parties</a><br>
+<a href="/item_orders/new">New item_orders</a><br>
 
 <ul>
 
@@ -8,8 +9,11 @@
   <li>
     <%= party.table_number %>
 
+<a href="/parties/<%=party.id%>">Show parties -- receipt</a>
+
   </li>
   <% end %>
+
 
 
 </ul>

@@ -11,18 +11,16 @@
 
   <% @item_orders.each do |item_order| %>
   <li>
-
+<a href="/item_orders/<%=item_order.id%>">
     <%= item_order.food_item.name %>
+    $<%= item_order.food_item.price %>
     table number:<%= item_order.party.table_number %>
     <%= item_order.party.is_paid %>
+  </a><br>
+
+
     <a href="/item_orders/<%=item_order.id%>/edit">EDIT</a>
     <a href="/item_orders/<%=item_order.id%>/edit">DELETE</a>
-
-  
-
-
-
-
 
   </li>
   <% end %>
