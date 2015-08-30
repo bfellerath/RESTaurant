@@ -2,8 +2,30 @@
 #cooldiv {
   background-color: #F0FFF0;
   border: lightgrey solid 2px;
+  text-align: center;
 }
 
 body {
   font-family: 'Share Tech Mono', ;
+}
+
+#navbar {
+  background-color: #F0FFF0;
+
+}
+#chefsdiv {
+  background-color: #F0FFF0;
+  border: lightgrey solid 2px;
+  text-align: center;
+}
+#navbar a {
+  font-family: 'Days One', sans-serif;
+  text-decoration: none;
+  display: block;
+}
+
+#headlinediv {
+  font-family: 'Days One', sans-serif;
+  font-weight: 600;
+  text-align: center;
 }

@@ -23,13 +23,41 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
   <link rel="stylesheet" href="/css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
+
+  <div id="headlinediv" class="container">
+
+  <h1>PARTY CONTROLLER</h1>
+
+  </div>
+
+  <div id="cooldiv" class="container">
+
+
+    <div id="navbar" class="row">
+
+      <div class="three columns">  <a class="button" href="/item_orders/new">ORDERS</a></div>
+      <div class="three columns">  <a class="button" href="/parties">TABLES</a></div>
+      <div class="three columns">  <a class="button" href="/item_orders">KITCHEN</a></div>
+      <div class="three columns"> <a class="button" href="/parties/new">ADMIN</a></div>
+
+    </div>
+
+
+
+  </div>
+
+
 <div class="container">
 
           <%= yield%>

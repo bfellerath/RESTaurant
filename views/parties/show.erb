@@ -1,30 +1,39 @@
-<h1>All of An individual party's food items</h1>
-<h3>receipt</h3>
+
+<br><center><h1>PARTY RECEIPT</h1></center>
 
 
 
 
-<a href="/item_orders/new">New item_orders</a><br>
-<a href="/item_orders">item orders</a><br>
-<a href="/">home</a><br>
 
 <div id="cooldiv" class="row">
+  <% party_total = 0 %>
+
 
 
 <ul>
-  table number:<%= @party.table_number %>
-  <%= @party.is_paid %>
+  table number:<%= @party.table_number %><br>
+  has paid:<%= @party.is_paid %>
   <% @party.item_orders.each do |item_order| %>
 
   <li>
 
 
     <%=item_order.food_item.name%>
-    <%=item_order.food_item.price%>
+    $<%=item_order.food_item.price%>
+    <% party_total += item_order.food_item.price %>
 
   </li>
 
   <% end %>
 
+  <li>
+  total: $<%= party_total %><br>
 
+  Tip suggestions:<br>
+  10% $<%= percentage = party_total * 0.100 %><br>
+  15% $<%= percentage = party_total * 0.150 %><br>
+  20% $<%= percentage = party_total * 0.200 %>
+
+
+  </li>
 </ul>

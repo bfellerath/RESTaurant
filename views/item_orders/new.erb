@@ -1,35 +1,31 @@
-<a href="/item_orders/new">New item_orders</a><br>
-<a href="/item_orders">item orders</a><br>
-<a href="/">home</a>
 
+  <br><center><h3>ENTER A NEW ORDER</h3></center>
+<div id="cooldiv" class="container">
 
-<div class="row">
-  <form class="five columns" action="/item_orders" method="post">
-    <select name="item_order[food_item_id]">
+  <br><center><form class="twelve columns" action="/item_orders" method="post">
+    food:<select name="item_order[food_item_id]">
       <% @food_items.each do |food_item| %>
       <option value="<%= food_item.id %>">
         <%= food_item.name %>
       </option>
       <% end %>
 
-    </select>
+    </select><br>
 
 
 
 
-    <select name="item_order[party_id]">
+table number:<select name="item_order[party_id]">
       <% @parties.each do |party| %>
       <option value="<%= party.id %>">
         <%= party.table_number %>
       </option>
       <% end %>
-    </select>
+    </select><br>
 
 
     <input type="submit">
 
   </form>
-
-
 
 </div>

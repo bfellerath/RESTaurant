@@ -1,9 +1,6 @@
-<h3>Food ITems THE PAGE</h3>
 
-<a href="/food_items/new">New food_items</a>
-<a href="/parties">Parties</a>
-<a href="/parties/new">New Parties</a>
-<a href="/">home</a>
+<center><h3>All Food Items</h3></center>
+
 
 <div id="cooldiv">
 
@@ -13,9 +10,9 @@
   <% @food_items.each do |food_item| %>
   <li>
   <%= food_item.name %>
-  <%= food_item.price %>
+  $<%= food_item.price %>
   <a href="/food_items/<%=food_item.id%>/edit">EDIT</a>
-  <a href="/food_items/<%=food_item.id%>/edit">DELETE</a>
+
   </li>
   <% end %>
 </ul>

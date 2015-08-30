@@ -1,35 +1,38 @@
-<h3>ITEM ORDERS... THE PAGE!!!</h3>
 
-<a href="/item_orders/new">New item_orders</a><br>
-<a href="/item_orders">item orders</a><br>
-<a href="/">home</a><br>
-<a href="/parties">VIEW ALL OPEN TABLES -- AND -- GET RECEIPT</a>
-
-<div id="cooldiv" class="row">
-
-
-<ul>
-
-  <% @item_orders.each do |item_order| %>
-  <li>
-<a href="/item_orders/<%=item_order.id%>">
-
-  <%=item_order.food_item.name%>
-  $<%=item_order.food_item.price%>
-  table number:<%= item_order.party.table_number%>
-  <%= item_order.party.is_paid %>
-  </a><br>
-
-  <form action="/item_orders/<%=item_order.id%>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="delete">
-
-  </form>
-
-
-
-  </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="twelve columns">
+      <br><center><h3>CHEF'S PAGE</h3></center>
+    </div>
+  </div>
 
 </div>
+
+
+
+  <% @item_orders.each do |item_order| %>
+
+<h5>
+
+
+    <!-- columns should be the immediate child of a .row -->
+
+
+
+<div id="chefsdiv" class="container">
+
+    <div class="row">
+      <div class="twelve columns">
+
+  <%=item_order.food_item.name%>|
+
+  table number:<%= item_order.party.table_number%>
+  </h5>
+
+  </div>
+</div>
+
+</div>
+
+
+  <% end %>

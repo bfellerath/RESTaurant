@@ -1,13 +1,14 @@
 
-<a href="/">home</a><br>
-<a href="/parties/new">New parties</a><br>
-<a href="/item_orders/new">ENTER ANOTHER ITEM ORDER</a><br>
+<br><center><h3>ALL TABLES</h3></center>
+
+<div id="cooldiv" class="container">
+
 
 <ul><br>
 
   <% @parties.each do |party|%>
   <li>
-    TABLE: <%= party.table_number %><br>
+    <strong>TABLE:<%= party.table_number %></strong><br>
 
 <a href="/parties/<%=party.id%>">View This Party's Receipt</a>
 
@@ -20,3 +21,5 @@
 
 
 </ul>
+
+</div>

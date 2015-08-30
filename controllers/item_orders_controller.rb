@@ -13,7 +13,7 @@ class ItemOrdersController < ApplicationController
 
   post '/' do
     ItemOrder.create(params[:item_order])
-    redirect '/item_orders'
+    redirect '/parties'
   end
 
   #- READ INDIVIDUAL: show--
