@@ -1,32 +1,23 @@
-
+  <br><center><h3>CHEF'S PAGE</h3></center>
 <div class="container">
-  <div class="row">
-    <div class="twelve columns">
-      <br><center><h3>CHEF'S PAGE</h3></center>
-    </div>
-  </div>
-
-</div>
-
 
 
   <% @item_orders.each do |item_order| %>
-
-<h5>
 
 
     <!-- columns should be the immediate child of a .row -->
 
 
 
-<div id="chefsdiv" class="container">
+<div id="<%= item_order.id %>" class="chefsdiv" data-createdAt="<%= item_order.created_at %>" data-id="<%= item_order.id %>">
 
     <div class="row">
       <div class="twelve columns">
 
-  <%=item_order.food_item.name%>|
-
+  <h5>
+    <%=item_order.food_item.name%> |
   table number:<%= item_order.party.table_number%>
+
   </h5>
 
   </div>
@@ -36,3 +27,6 @@
 
 
   <% end %>
+
+
+</div>

@@ -13,7 +13,7 @@ body {
   background-color: #F0FFF0;
 
 }
-#chefsdiv {
+.chefsdiv {
   background-color: #F0FFF0;
   border: lightgrey solid 2px;
   text-align: center;
@@ -28,4 +28,5 @@ body {
   font-family: 'Days One', sans-serif;
   font-weight: 600;
   text-align: center;
+  color: #3D3D3D;
 }
