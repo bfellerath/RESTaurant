@@ -16,6 +16,9 @@ function collapse(elem){
     elem.find('button.shower').show();
 }
 
+
+
+
 // $('.shower').onClick(function(){
 //     $(this).parent.show();
 // })
