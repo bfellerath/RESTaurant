@@ -16,7 +16,6 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
-    byebug (6.0.2)
     coderay (1.1.0)
     i18n (0.7.0)
     json (1.8.3)
@@ -30,11 +29,6 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    rack-test (0.6.3)
-      rack (>= 1.0)
-    racksh (1.0.0)
-      rack (>= 1.0)
-      rack-test (>= 0.5)
     rake (10.4.2)
     sinatra (1.4.6)
       rack (~> 1.4)
@@ -53,10 +47,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   pg
   pry
-  racksh
   rake
   sinatra
   sinatra-activerecord
